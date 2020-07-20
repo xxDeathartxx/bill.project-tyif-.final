@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="/css/main.css">
+    <title>Bill generator</title>
+    </head>
+    <body>
+<div class="main-body">
+    <table id="bill_tabel">
+                <h2 id="table-title1">bill</h2>
+        <thead>
+            <tr>
+                <th class="tborder">Id</th>
+                <th class="tborder">Product_name</th>
+                <th class="tborder">quantity</th>
+                <th class="tborder">price</th>
+                <th colspan="2" class="tborder">Action</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {{#each bill}}
+            <tr>
+                <td>{{this.id}}</td>
+                <td>{{this.product_name}}</td>
+                <td>{{this.quantity}}</td>
+                <td>{{this.price}}</td>
+                <td><button class="btn-danger">ok</button></td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+    </body>
+    </html>
+
